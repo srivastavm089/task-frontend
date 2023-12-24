@@ -58,5 +58,10 @@ gap: 8vh;
 }
 
 
-
+@media screen and (max-width:400px) {
+  .middle-parent{
+    width: 100%;
+  }
+  
+}
 /* Animated background */

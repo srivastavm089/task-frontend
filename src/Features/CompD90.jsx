@@ -117,7 +117,7 @@ const CompD90 = () => {
           >
             Logout
           </button>
-          <div className="absolute xl:text-xl flex top-[25%] mt-4 xl:mt-0 gap-[38vh] xl:gap-8 xl:gap-0 left-[45%] flex-col text-black top-2 left-2 text-sm lg:text-xl z-40   xl:text-white xl:top-[16%] xl:left-2">
+          <div className="absolute xl:text-xl   flex top-[25%] mt-4 xl:mt-0 gap-[40vh] xl:gap-8 xl:gap-0 left-[35%] sm:left-[41%] md:left-[42%] lg:left-[44%]  flex-col text-black top-2 left-2 text-sm lg:text-xl z-40   xl:text-white xl:top-[16%] xl:left-2">
             <div className="flex gap-4 xl:gap-0 xl:flex-col recent justify-center items-center">
               <span>R</span>
               <span>E</span>

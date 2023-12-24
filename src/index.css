@@ -165,3 +165,10 @@ animation: bubble 7s linear infinite;
 .clippath:hover{
   transform: rotate(180deg) scale(1.2);
 }
+
+
+@media screen and (max-width:470px) {
+  #uplaodBtn{
+     font-size: 7px !important;
+  }
+}
