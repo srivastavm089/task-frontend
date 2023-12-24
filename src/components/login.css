@@ -1,0 +1,62 @@
+#loginBtn{
+  transition: all 0.3s;  
+
+ color: white;
+
+  height: 8vh;
+
+}
+/* #login-form{
+ background: url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
+ clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+} */
+
+.login-body{
+  background-image: url("../utils//background.png");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.middle-parent{
+  width: 60%;
+  height: 80%;
+  display: flex;
+
+}
+.login-middle{
+  background-image: url("../utils/middleimage.png");
+  width: 100%;
+  height:100%;
+  background-size: cover;
+  filter: brightness(100%);
+
+}
+
+.login-middle-bro{
+  background-color: gray;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+gap: 8vh;
+
+}
+.loginBtn{
+  background: orange;
+  color: white;
+  transition: all 0.3s;
+  
+
+}
+
+
+
+/* Animated background */

@@ -1,0 +1,23 @@
+.loader-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader-sub-child {
+  height: 25vh;
+  width: 25vh;
+  border-bottom: 5px solid black;
+  border-radius: 50%;
+  transition: all 0.3s;
+  animation:LoaderAnimation 800ms linear infinite ;
+}
+
+@keyframes LoaderAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

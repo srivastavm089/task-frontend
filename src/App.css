@@ -1,0 +1,162 @@
+#hide {
+  transform: translateX(-100vw) rotate(-120);
+  transition: all 1s;
+  animation: jaadu 0.6s forwards;
+}
+@keyframes jaadu {
+  0% {
+    transform: translateX(-90vw) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+.imagesSection::-webkit-scrollbar {
+  display: none;
+}
+.firstImage {
+  transition: all 0.5s;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+.secondIMage {
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    100% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    0% 70%,
+    0% 35%,
+    20% 10%
+  );
+}
+
+#jaadu {
+  /* clip-path: none; */
+  transition: all 0.5s;
+  transform: scale(1.1) rotate(90deg);
+}
+
+.D20hoverFont > span {
+  transition: all 0.5s;
+}
+
+.D20hoverFont > span:hover {
+  transform: translateY(-5px);
+}
+
+.headshot {
+  flex-shrink: 0;
+  margin: 20px;
+  height: calc(150px + 6vw);
+  width: calc(150px + 6vw);
+  border: calc(8px + 0.2vw) solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: cover;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+  border: 5px solid #f49586;
+}
+
+.headshot:hover {
+  transform: scale(1.2) rotate(120deg);
+}
+
+.headshot-3 {
+  border-radius: 50% 10%;
+  background-image: var(--img-url),
+    linear-gradient(to bottom left, #f83600, #f9d423);
+}
+
+@media screen and (max-width: 639px) {
+  .response {
+    left: 25%;
+  }
+}
+@media screen and (max-width: 472px) {
+  .response {
+    left: 15%;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2a3137;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+.main:hover {
+  transform: rotate(180deg);
+}
+
+* {
+  box-sizing: content-box;
+}
+
+.outer-circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+}
+
+.outer-circle span {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+}
+
+.outer-circle span:nth-child(1) {
+  filter: blur(5px);
+}
+
+.outer-circle span:nth-child(2) {
+  filter: blur(10px);
+}
+
+.outer-circle span:nth-child(3) {
+  filter: blur(25px);
+}
+
+.outer-circle span:nth-child(4) {
+  filter: blur(150px);
+}
+
+.inner-circle {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background: black;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

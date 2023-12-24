@@ -1,0 +1,7 @@
+#animation-box{
+  transition: all 0.5s;
+}
+#animation-box:hover {
+    box-shadow: 6px 6px 6px gray;
+    transform: translateY(-5px);
+}
