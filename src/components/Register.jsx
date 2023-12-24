@@ -39,7 +39,7 @@ const Register = () => {
     }
   }, [LogoutLoader]);
   const loginHandler = async ({ email, password, confirmPassword }) => {
-    let data = await fetch("https://new-task-27yy.onrender.com/task/v1/register", {
+    let data = await fetch("https://task-5b0t.onrender.com/task/v1/register", {
       method: "post",
       body: JSON.stringify({ email, password, confirmPassword }),
       headers: { "Content-Type": "application/json" },

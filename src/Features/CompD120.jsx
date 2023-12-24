@@ -18,7 +18,7 @@ const CompD120 = () => {
     const id = JSON.parse(localStorage.getItem("token"));
 
     const { data } = await axios.get(
-      `http://localhost:4000/task/v1/getImage/${id}`
+      `https://task-5b0t.onrender.com/task/v1/getImage/${id}`
     );
 
     setImageData(data.data);
@@ -43,7 +43,7 @@ const CompD120 = () => {
     e.preventDefault();
     setLoader(true);
     const user = JSON.parse(localStorage.getItem("token"));
-    const data = await fetch("http://localhost:4000/task/v1/uplaod", {
+    const data = await fetch("https://task-5b0t.onrender.com/task/v1/uplaod", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ image, access: "D120", user }),

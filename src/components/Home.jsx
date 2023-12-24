@@ -22,7 +22,7 @@ const Home = () => {
   const getUser = async () => {
     const checkUser = JSON.parse(localStorage.getItem("token"));
     const { data } = await axios.get(
-      `https://new-task-27yy.onrender.com/task/v1/me/${checkUser}`
+      `https://task-5b0t.onrender.com/task/v1/me/${checkUser}`
     );
     setUser({ email: data.user.email, role: data.user.role });
   };

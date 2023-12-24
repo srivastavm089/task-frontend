@@ -66,7 +66,7 @@ const CompD90 = () => {
     const id = JSON.parse(localStorage.getItem("token"));
 
     const { data } = await axios.get(
-      `http://localhost:4000/task/v1/getImage/${id}`
+      `https://task-5b0t.onrender.com/task/v1/getImage/${id}`
     );
 
     setImageData(data.data);
@@ -77,7 +77,7 @@ const CompD90 = () => {
     e.preventDefault();
     setLoader(true);
     const user = JSON.parse(localStorage.getItem("token"));
-    const data = await fetch("http://localhost:4000/task/v1/uplaod", {
+    const data = await fetch("https://task-5b0t.onrender.com/task/v1/uplaod", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ image, access: "D90", user }),
@@ -138,7 +138,7 @@ const CompD90 = () => {
           </div>
 
           <div
-            className="  w-full flex flex-col gap-10 xl:gap-1 border xl:w-8/12 overflow-scroll scroll-smooth bg-white   h-[80vh] xl:absolute left-10 shadow-lg shadow-gray-600/50  top-4 z-20"
+            className="w-full flex flex-col gap-10 xl:gap-1 border xl:w-8/12 overflow-scroll scroll-smooth bg-white   h-[80vh] xl:absolute left-10 shadow-lg shadow-gray-600/50  top-4 z-20"
             id="hide"
             ref={scrollRef}
           >

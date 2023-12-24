@@ -9,7 +9,7 @@ const ForgetPassword = () => {
   const resetHandler = async (e) => {
     e.preventDefault();
     const { data } = await axios.post(
-      `https://new-task-27yy.onrender.com/task/v1/forgetPassword`,
+      `https://task-5b0t.onrender.com/task/v1/forgetPassword`,
       { email },
       { headers: { "Content-Type": "application/json" } }
     );

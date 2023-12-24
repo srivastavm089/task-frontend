@@ -43,7 +43,7 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
 
-    let data = await fetch("https://new-task-27yy.onrender.com/task/v1/loginUser", {
+    let data = await fetch("https://task-5b0t.onrender.com/task/v1/loginUser", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },

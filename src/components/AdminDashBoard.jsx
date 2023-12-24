@@ -27,7 +27,7 @@ const AdminDashBoard = () => {
     const id = JSON.parse(localStorage.getItem("token"));
 
     const { data } = await axios.get(
-      `https://new-task-27yy.onrender.com/task/v1/getImage/${id}`
+      `https://task-5b0t.onrender.com/task/v1/getImage/${id}`
     );
 
     setImageData(data.data);
@@ -39,7 +39,7 @@ const AdminDashBoard = () => {
     setLoader(true);
     const user = JSON.parse(localStorage.getItem("token"));
     const data = await fetch(
-      `https://new-task-27yy.onrender.com/task/v1/admin/userAdd/images/${user}`,
+      `https://task-5b0t.onrender.com/task/v1/admin/userAdd/images/${user}`,
       {
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -94,7 +94,7 @@ const AdminDashBoard = () => {
   const getUserCount = async () => {
     const user = JSON.parse(localStorage.getItem("token"));
     const { data } = await axios.get(
-      `https://new-task-27yy.onrender.com/task/v1/admin/userList/${user}`
+      `https://task-5b0t.onrender.com/task/v1/admin/userList/${user}`
     );
 
     setUserCount(data.count);

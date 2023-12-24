@@ -12,7 +12,7 @@ const ResetPasswrod = () => {
   const resetHandler = async (e) => {
     e.preventDefault();
     const { data } = await axios.post(
-      `https://new-task-27yy.onrender.com/task/v1/finalReset`,
+      `https://task-5b0t.onrender.com/task/v1/finalReset`,
       { password, confirmPassword, email },
       { headers: { "Content-Type": "application/json" } }
     );
