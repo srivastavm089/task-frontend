@@ -146,15 +146,15 @@ const Register = () => {
                 <LockIcon className="absolute top-7 left-1 opacity-50" />
               </div>
               <div
-                className="loginBtn rounded flex justify-between  rounded w-56 "
-                style={{ padding: "0.1em 0.1em 0.1em 0"}}
+                className="loginBtn relative  rounded h-[40px] flex justify-between  rounded w-56 "
+                style={{ padding: "0.1em 0em 0.1em 0"}}
               >
                 <button className="pt-1 pb-0 pl-6 pr-10 rounded ">
                   Register
                 </button>
                 <Link
                   to="/login"
-                  className="bg-gray-600 pr-8 pl-8 text-center rounded  hover:bg-slate-500 p-2"
+                  className="bg-gray-600 right-[0.1em] absolute right-0 pr-8 pl-8 text-center rounded  hover:bg-slate-500 p-2"
                
                 >
                   Login

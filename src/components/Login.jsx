@@ -102,11 +102,10 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   style={{ height: "18px", width: "80%" }}
                 />
-                
 
                 <KeyIcon className="absolute top-7 left-1 opacity-50" />
               </div>
-              <div className="relative loginBtn flex justify-between pr-[0.1em]  pb-[0.1em] pt-[0.1em] rounded">
+              <div className="relative loginBtn flex h-[40px] justify-between   pb-[0.1em] pt-[0.1em] rounded">
                 <button
                   type="submit"
                   onClick={loginHandler}
@@ -116,7 +115,7 @@ const Login = () => {
                 </button>
                 <Link
                   to="/register"
-                  className=" bg-gray-600  rounded  hover:bg-slate-500"
+                  className=" bg-gray-600 absolute right-[0.1em]  rounded  hover:bg-slate-500"
                   style={{ padding: "0.5em 1.5em 0.5em 1.5em" }}
                 >
                   Register
