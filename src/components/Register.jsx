@@ -147,9 +147,9 @@ const Register = () => {
               </div>
               <div
                 className="loginBtn rounded flex justify-between  rounded w-56 "
-                style={{ padding: "0.1em 0.2em 0.1em 0"}}
+                style={{ padding: "0.1em 0.1em 0.1em 0"}}
               >
-                <button className="pt-1 pb-1 pl-6 pr-10 rounded ">
+                <button className="pt-1 pb-0 pl-6 pr-10 rounded ">
                   Register
                 </button>
                 <Link

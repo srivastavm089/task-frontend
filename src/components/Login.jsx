@@ -106,7 +106,7 @@ const Login = () => {
 
                 <KeyIcon className="absolute top-7 left-1 opacity-50" />
               </div>
-              <div className="relative loginBtn flex justify-between  p-[0.1em] rounded">
+              <div className="relative loginBtn flex justify-between pr-[0.1em]  pb-[0.1em] pt-[0.1em] rounded">
                 <button
                   type="submit"
                   onClick={loginHandler}
