@@ -69,7 +69,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-body  ">
+    <div className="login-body">
       <ToastContainer className="w-96 sm:w-full" />
       <div className="middle-parent">
         <div className="login-middle hidden md:flex"></div>

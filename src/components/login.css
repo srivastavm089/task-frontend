@@ -58,10 +58,17 @@ gap: 8vh;
 }
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:450px) {
   .middle-parent{
     width: 100%;
+    height: 100%;
   }
+  .loginBtn{
+    width: 100%;
+    
+  }
+
+
   
 }
 /* Animated background */
