@@ -162,7 +162,7 @@ const Register = () => {
                   className="text-[12px]  rounded text-white"
                 >
                   already have an account ?{" "}
-                  <Link to="/login" id="logoutBtn" className="hover:text-red-500">
+                  <Link to="/login" id="logoutBtn " className="hover:text-red-500 active:text-red-500">
                     Login
                   </Link>
                 </Link>

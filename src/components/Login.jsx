@@ -123,7 +123,7 @@ const Login = () => {
                   className="text-[12px]  rounded text-white"
                 >
                   don't have an account ?{" "}
-                  <Link to="/register" className="hover:text-red-500">
+                  <Link to="/register" className="hover:text-red-500   active:text-red-500 ">
                     Register
                   </Link>
                 </Link>
