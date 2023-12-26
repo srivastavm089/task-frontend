@@ -145,19 +145,24 @@ const Register = () => {
                 </p>
                 <LockIcon className="absolute top-7 left-1 opacity-50" />
               </div>
-              <div
-                className="loginBtn relative  rounded h-[40px] flex justify-between  rounded w-56 "
-                style={{ padding: "0.1em 0em 0.1em 0"}}
+              <button
+                type="submit"
+                onClick={loginHandler}
+                id="logoutBtn"
+                className="logoutBtn bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
               >
-                <button className="pt-1 pb-0 pl-6 pr-10 rounded ">
-                  Register
-                </button>
+                Register
+              </button>
+
+              <div>
                 <Link
-                  to="/login"
-                  className="bg-gray-600 right-[0.1em] absolute right-0 pr-8 pl-8 text-center rounded  hover:bg-slate-500 p-2"
-               
+                  to="/register"
+                  className="text-[12px]  rounded text-white"
                 >
-                  Login
+                  already have an account ?{" "}
+                  <Link to="/login" id="logoutBtn" className="hover:text-red-500">
+                    Login
+                  </Link>
                 </Link>
               </div>
             </form>

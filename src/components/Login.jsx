@@ -105,20 +105,25 @@ const Login = () => {
 
                 <KeyIcon className="absolute top-7 left-1 opacity-50" />
               </div>
-              <div className="relative loginBtn flex h-[40px] justify-between   pb-[0.1em] pt-[0.1em] rounded">
-                <button
-                  type="submit"
-                  onClick={loginHandler}
-                  className="pt-1 pb-1 pl-10 pr-10 rounded"
-                >
-                  Login
-                </button>
+
+              <button
+                type="submit"
+                onClick={loginHandler}
+                id="logoutBtn"
+                className="logoutBtn bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
+              >
+                Login
+              </button>
+
+              <div>
                 <Link
                   to="/register"
-                  className=" bg-gray-600 absolute right-[0.1em]  rounded  hover:bg-slate-500"
-                  style={{ padding: "0.5em 1.5em 0.5em 1.5em" }}
+                  className="text-[12px]  rounded text-white"
                 >
-                  Register
+                  don't have an account ?{" "}
+                  <Link to="/register" className="hover:text-red-500">
+                    Register
+                  </Link>
                 </Link>
               </div>
             </form>

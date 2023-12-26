@@ -13,9 +13,10 @@ const CompD180 = () => {
   const [image, setImage] = React.useState("");
   const [imageData, setImageData] = React.useState([]);
   const [loader, setLoader] = React.useState(false);
-  const { checkData, setCheckData, setLogoutLoader, LogoutLoader  } = useMyContext();
+  const { checkData, setCheckData, setLogoutLoader, LogoutLoader } =
+    useMyContext();
   const scrollRef = useRef(null);
- const navigate = useNavigate()
+  const navigate = useNavigate();
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -49,7 +50,6 @@ const CompD180 = () => {
     }
   }, [checkData, LogoutLoader]);
 
-
   const handleImageChange = (e) => {
     console.log();
     const reader = new FileReader();
@@ -76,6 +76,7 @@ const CompD180 = () => {
   };
   const current = new Date();
   const converted = String(current).slice(8, 10);
+
   return (
     <Fragment>
       {loader ? (
@@ -94,7 +95,7 @@ const CompD180 = () => {
             Logout
           </button>
 
-          <div className=" flex flex-col pb-4  sm:min-h-[70vh]">
+          <div className=" flex flex-col pb-4 h-[50vh]  sm:min-h-[70vh]">
             <div className="flex gap-3 relative pt-1   overflow-scroll imagesSection ">
               {imageData.map((item) => {
                 if (
@@ -140,7 +141,11 @@ const CompD180 = () => {
                 component="label"
                 variant="contained"
                 className="md:w-72 w-36 text-[7px] sm:text-[12px]"
-                style={{ paddingTop: "1vh", paddingBottom: "1vh", }}
+                style={{
+                  paddingTop: "1vh",
+                  paddingBottom: "1vh",
+                  fontSize: "7px",
+                }}
                 id="uplaodBtn"
               >
                 Choose File
@@ -149,11 +154,16 @@ const CompD180 = () => {
                   accept="image/*"
                   onChange={handleImageChange}
                 />
-                
               </Button>
               <button
-                className="bg-[tomato] text-[7px] sm:text-[12px] pt-2 pb-2 sm:pt-2 sm:pb-2 rounded text-white md:w-72 w-36"
+              id="logoutBtn"
+                className="bg-[tomato]  text-[7px] sm:text-[12px] pt-2 pb-2 sm:pt-2 sm:pb-2 rounded text-white md:w-72 w-36 active:bg-slate-400"
                 onClick={updateHandler}
+                style={{
+                  paddingTop: "1vh",
+                  paddingBottom: "1vh",
+                  fontSize: "7px",
+                }}
               >
                 UPLOAD IMAGE
               </button>

@@ -78,7 +78,7 @@ const CompD120 = () => {
       {loader ? (
         <Loader />
       ) : (
-        <div className="relative bg-gray-500 h-full flex justify-center items-center flex-col flex-col-reverse gap-2      xl:flex-row">
+        <div className="relative bg-gray-500 h-screen md:h-full flex justify-center items-center flex-col flex-col-reverse      xl:flex-row">
           <button
             className="absolute z-30 right-3 top-1 text-white hover:bg-[#7363F3] logout font-bold p-2 rounded cursor-pointer"
             id="logout"
@@ -91,7 +91,7 @@ const CompD120 = () => {
             Logout
           </button>
           <div>
-            <div className="flex lg:p-12 mt-12 md:mt-0   w-full  xl:flex-col gap-2 xl:w-[250px] xl:h-screen   justify-center items-center  shadow-lg shadow-gray-600/50 ">
+            <div className="flex lg:p-12 mt-12 md:mt-0   w-full  xl:flex-col gap-2 xl:w-[250px] xl:h-screen   justify-center items-center  md:shadow-lg shadow-gray-600/50 ">
               <img
                 className="xl:h-56 xl:w-56 border xl:rounded-full rounded-full sm:rounded-xl w-20 h-20 sm:h-36 sm:w-36 md:rounded-full md:w-12 md:h-12"
                 src={
@@ -116,8 +116,8 @@ const CompD120 = () => {
                   />
                 </Button>
                 <button
-                  className="bg-[tomato]  rounded text-white  sm:w-56 sm:h-8 w-36 h-10 text-sm  sm:text-lg"
-                  style={{fontSize:"8px", height:"4vh"}}
+                  className="bg-[tomato]   rounded text-white  sm:w-56 sm:h-8 w-36 h-10 text-sm  sm:text-lg active:bg-gray-500"
+                  style={{fontSize:"7px", height:"4vh"}}
                   onClick={updateHandler}
                 >
                   UPLOAD IMAGE
@@ -125,9 +125,9 @@ const CompD120 = () => {
               </div>
             </div>
           </div>
-          <div className="flex center text-white xl:w-[80vw] flex-col gap-5 relative w-full">
-            <div className="flex h-[50vh] body overflow-scroll imagesSection ">
-              <div className="response absolute sm:left-[25%]   md:left-[30%] lg:left-[35%] top-80 left-96 flex gap-10 font-bold text-sm sm:text-4xl D20hoverFont">
+          <div className="flex center text-white   xl:w-[80vw] flex-col gap-5 relative w-full">
+            <div className="flex h-[35vh] md:h-[50vh] body overflow-scroll imagesSection ">
+              <div className="response absolute sm:left-[25%]   md:left-[30%] lg:left-[35%] top-60 xl:top-80 left-96 flex gap-10 font-bold text-sm sm:text-4xl D20hoverFont">
                 <span>R</span>
                 <span>E</span>
                 <span>C</span>
@@ -136,7 +136,7 @@ const CompD120 = () => {
                 <span>T</span>
               </div>
 
-              <div className="response absolute sm:left-[25%]  md:left-[30%] lg:left-[35%] bottom-2 left-96 flex gap-10 font-bold text-sm sm:text-4xl D20hoverFont">
+              <div className="response absolute sm:left-[25%]  md:left-[30%] lg:left-[35%] bottom-7 xl:bottom-2 left-96 flex gap-10 font-bold text-sm sm:text-4xl D20hoverFont">
                 <span>I</span>
                 <span>M</span>
                 <span>A</span>
@@ -144,7 +144,7 @@ const CompD120 = () => {
                 <span>E</span>
                 <span>S</span>
               </div>
-              {imageData.map((item) => {
+              {imageData.map((item , idx) => {
                 if (
                   item.access == "D120" &&
                   item.UploadedOn.slice(8, 10) == converted
@@ -154,12 +154,13 @@ const CompD120 = () => {
                       className="w-96 headshot headshot-3"
                       src={item.url}
                       alt="logo"
+                      key={idx}
                     />
                   );
                 }
               })}
             </div>
-            <div className="flex h-[50vh] overflow-scroll imagesSection">
+            <div className="flex h-[35vh] md:h-[50vh]  overflow-scroll imagesSection">
               {imageData.map((item) => {
                 if (item.access == "D120") {
                   return (
