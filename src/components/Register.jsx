@@ -150,8 +150,8 @@ const Register = () => {
                 onClick={loginHandler}
                 value="Register"
                 id="logoutBtn"
-                style={{ height: "36px", width:"100%" }}
-                className="logoutBtn bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
+                style={{ height: "36px",}}
+                className="logoutBtn w-[50%] md:w-[100%]  bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
               >
                 
               </input>
