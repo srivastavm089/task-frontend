@@ -145,14 +145,16 @@ const Register = () => {
                 </p>
                 <LockIcon className="absolute top-7 left-1 opacity-50" />
               </div>
-              <button
-                type="submit"
+              <input
+                type="button"
                 onClick={loginHandler}
+                value="Register"
                 id="logoutBtn"
+                style={{ height: "18px", width:"80%" }}
                 className="logoutBtn bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
               >
-                Register
-              </button>
+                
+              </input>
 
               <div>
                 <Link
