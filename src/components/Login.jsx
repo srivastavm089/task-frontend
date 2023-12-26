@@ -81,7 +81,7 @@ const Login = () => {
             <div className="text-center text-2xl text-orange-400 font-bold">
               LOGIN
             </div>
-            <form className="flex flex-col gap-5">
+            <form className="flex flex-col gap-5 box-border ">
               <div className="flex flex-col relative">
                 <span className="text-white">Email</span>
                 <input
@@ -98,9 +98,9 @@ const Login = () => {
                 <span className="text-white">Password</span>
                 <input
                   type="password"
-                  className="rounded h-8 pl-8 w-full "
+                  className="rounded h-8 pl-8 w-full"
                   onChange={(e) => setPassword(e.target.value)}
-                  style={{ height: "18px", width: "80%" }}
+                  style={{ height: "18px", width:"80%" }}
                 />
 
                 <KeyIcon className="absolute top-7 left-1 opacity-50" />
