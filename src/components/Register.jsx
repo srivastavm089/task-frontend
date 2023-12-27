@@ -19,9 +19,7 @@ const Register = () => {
   console.log(errors);
   const { setLoginLoader, LogoutLoader, setLogoutLoader, setMessage } =
     useMyContext();
-  const [email, setemail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+
   const navigate = useNavigate();
   useEffect(() => {
     if (LogoutLoader) {
@@ -39,24 +37,33 @@ const Register = () => {
     }
   }, [LogoutLoader]);
   const loginHandler = async ({ email, password, confirmPassword }) => {
-    let data = await fetch("https://task-5b0t.onrender.com/task/v1/register", {
+    console.log("this")
+    console.log(email, password, confirmPassword)
+    let data = await toast.promise(fetch("https://task-5b0t.onrender.com/task/v1/register", {
       method: "post",
       body: JSON.stringify({ email, password, confirmPassword }),
       headers: { "Content-Type": "application/json" },
-    });
+    }),
+    {
+      pending:"Processing...",
+      success:"created successfully",
+      error:"something went wrong"
+    }
+    ) 
+  console.log(data)
     data = await data.json();
 
     if (!data.success) {
-      toast.error(data.message + "😂", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      // toast.error(data.message + "😂", {
+      //   position: "top-center",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "dark",
+      // });
     } else {
       setLoginLoader(true);
       setMessage(data.message);
@@ -146,8 +153,8 @@ const Register = () => {
                 <LockIcon className="absolute top-7 left-1 opacity-50" />
               </div>
               <input
-                type="button"
-                onClick={loginHandler}
+                type="submit"
+                // onClick={()=> loginHandler(email, password, confirmPassword)}
                 value="Register"
                 id="logoutBtn"
                 style={{ height: "36px",}}

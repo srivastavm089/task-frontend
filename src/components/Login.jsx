@@ -13,11 +13,11 @@ const Login = () => {
     useMyContext();
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
+
   useEffect(() => {
     const check = JSON.parse(localStorage.getItem("token"));
     if (message) {
       navigate("/");
-      console.log("this");
     }
     if (check) {
       {
@@ -43,25 +43,22 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
 
-    let data = await fetch("https://task-5b0t.onrender.com/task/v1/loginUser", {
-      method: "post",
-      body: JSON.stringify({ email, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    let data = await toast.promise(
+      fetch("https://task-5b0t.onrender.com/task/v1/loginUser", {
+        method: "post",
+        body: JSON.stringify({ email, password }),
+        headers: { "Content-Type": "application/json" },
+      }),
+      {
+        pending: "Verifying Data",
+        success: "Verified",
+        error: "wrong password or email",
+      }
+    );
+
     data = await data.json();
 
-    if (!data.success) {
-      toast.error(data.message + "😂", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-    } else {
+    if (data.success) {
       setLoginLoader(true);
       setMessage(data.message);
       localStorage.setItem("token", JSON.stringify(data.token));
@@ -100,22 +97,20 @@ const Login = () => {
                   type="password"
                   className="rounded h-8 pl-8 w-full"
                   onChange={(e) => setPassword(e.target.value)}
-                  style={{ height: "18px", width:"80%" }}
+                  style={{ height: "18px", width: "80%" }}
                 />
 
                 <KeyIcon className="absolute top-7 left-1 opacity-50" />
               </div>
 
               <input
-               type="button"
+                type="button"
                 onClick={loginHandler}
                 value="Login"
                 id="logoutBtn"
-                style={{ height: "36px"}}
+                style={{ height: "36px" }}
                 className="logoutBtn w-[50%] md:w-[100%] bg-[#FB923C] flex h-[32px] justify-center items-center text-white cursor-pointer hover:bg-gray-500  rounded active:bg-gray-500"
-              >
-   
-              </input>
+              ></input>
 
               <div>
                 <Link
@@ -123,7 +118,10 @@ const Login = () => {
                   className="text-[12px]  rounded text-white"
                 >
                   don't have an account ?{" "}
-                  <Link to="/register" className="hover:text-red-500   active:text-red-500 ">
+                  <Link
+                    to="/register"
+                    className="hover:text-red-500   active:text-red-500 "
+                  >
                     Register
                   </Link>
                 </Link>
